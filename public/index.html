@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en" ng-app="climbApp">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+</head>
+<body ng-controller="mainCtrl">
+
+<div style="margin: 50px;">
+  <input type="text" placeholder="First Name" ng-model="firstName">
+  <br>
+  <br>
+  <input type="text" placeholder="Last Name" ng-model="lastName">
+  <br>
+  <br>
+  <input type="text" placeholder="Email" ng-model="email">
+  <br>
+  <br>
+  <button ng-click="submitNewUser()">
+    Submit
+  </button>
+
+  <div style="margin-top: 30px;">
+    <h1>Users</h1>
+    <div ng-repeat="user in users" style="border: 1px solid rebeccapurple; margin: 20px 0;">
+      <p>{{ user.firstName }}</p>
+      <p>{{ user.lastName }}</p>
+      <p>{{ user.email }}</p>
+    </div>
+
+  </div>
+
+
+
+
+</div>
+
+
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.7/angular.js"></script>
+<script src="./app.js"></script>
+<script src="./mainCtrl.js"></script>
+<script src="./mainService.js"></script>
+
+</body>
+</html>
